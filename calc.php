@@ -14,8 +14,12 @@
       $resposta = $number * $number2;
        echo "A multiplicação é igual $resposta";
     }elseif($operacao == "/"){
-      $resposta = $number / $number2;
-       echo "A divisão é igual $resposta";
+       if($number2 == 0){
+         echo"operação invalida zero é indivisível";
+       }else{
+         $resposta = $number / $number2;
+         echo "A divisão é igual $resposta";
+       }
     }else{
        echo "operação invalida";
     };
