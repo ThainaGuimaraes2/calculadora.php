@@ -12,11 +12,15 @@
 
         <label for="number2">Numeros2:</label>
          <input type="number" name="number2" >
-
-        <label for="operacao">Numeros2:</label>
-         <input type="text" name="operacao" placeholder="+,-,*,/" >
-
-        <input type="submit" value="Enviar">
+         
+         
+        <select name="operacao" >
+            <option value="+">Adição</option>
+            <option value="-">Subtrair</option>
+            <option value="*">Multiplicar</option>
+            <option value="/">Dividir</option>
+        </select>
+         <input type="submit" value="Enviar">
          <input type="reset" value="limpar">
         
      </form>

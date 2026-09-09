@@ -1,26 +1,30 @@
  <?php
-    $operacao= $_POST["operacao"];
+    $operacao = $_POST["operacao"];
+
     $number = $_POST["number"];
     $number2 = $_POST["number2"];
     $resposta;
 
-    if ($operacao == "+"){
-       $resposta = $number + $number2;
-       echo "A soma é igual $resposta";
-    } elseif($operacao == "-"){
-      $resposta = $number - $number2;
-       echo "A subtração é igual $resposta";
-    }elseif($operacao == "*"){
-      $resposta = $number * $number2;
-       echo "A multiplicação é igual $resposta";
-    }elseif($operacao == "/"){
-       if($number2 == 0){
-         echo"operação invalida zero é indivisível";
-       }else{
-         $resposta = $number / $number2;
-         echo "A divisão é igual $resposta";
-       }
-    }else{
-       echo "operação invalida";
-    };
+
+   function calculador($operacao,$number,$number2){
+      if($operacao === "+"){
+        $resposta = $number + $number2; 
+        echo "O resultado da adição $resposta";
+      }elseif ($operacao === "-"){
+        $resposta = $number - $number2; 
+        echo "O resultado da subtraçaõ $resposta";
+      }elseif ($operacao === "*"){
+        $resposta = $number * $number2; 
+        echo "O resultado da multiplicação $resposta";
+      }elseif ($operacao === "/"){
+        if($number == "0"){
+           echo " zero é um numero indivisível";
+        } else{
+         $resposta = $number / $number2; 
+          echo "O resultado da divisão $resposta";
+        };
+      }
+   };
+    calculador($operacao,$number,$number2);
+
   ?>
