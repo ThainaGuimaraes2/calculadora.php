@@ -17,9 +17,11 @@
         $resposta = $number * $number2; 
         echo "O resultado da multiplicação $resposta";
       }elseif ($operacao === "/"){
-        if($number == "0"){
+        if($number == "0") {
            echo " zero é um numero indivisível";
-        } else{
+        } elseif ($number2 == "0"){
+          echo " zero é um numero indivisível";
+        }else{
          $resposta = $number / $number2; 
           echo "O resultado da divisão $resposta";
         };
